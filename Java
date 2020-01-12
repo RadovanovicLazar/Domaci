@@ -1,0 +1,26 @@
+import java.util.Scanner;
+ class AritmetickaSredina {
+ public static void main(String[] args) {
+ int i = 1;
+ float prosek = 0, temp;
+ Scanner consoleIn = new Scanner(System.in);
+ System.out.println("Program za izracunavanje aritmeticke sredine");
+ System.out.println("Unos brojeva zavrsite nulom");
+ System.out.println("Unesite prvi broj: ");
+ temp = consoleIn.nextFloat();
+ while (temp != 0){
+ prosek = prosek + temp;
+ i++;
+ System.out.println("Unesite "+i+". broj: ");
+ temp = consoleIn.nextInt();
+ }
+ if (i!=1)
+ {
+ prosek = prosek/(i-1);
+ System.out.println("Aritmeticka sredina iznosi: " + prosek);
+ }
+ else{
+ System.out.println("Niste uneli ni jedan broj");
+ }
+ }
+} 
